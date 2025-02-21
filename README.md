@@ -9,7 +9,14 @@ Use SSO login or Environmental Variable for your AWS Profile
 `terraform apply`\
 #### Hosts.yml
 Put your DNS name under host block
-
+```yaml
+all:
+  children:
+    web:
+      hosts:
+        <your-dns-name>: {}
+        <your-dns-name>: {}
+```
 #### Ansible
 Before running the YAML file, it is good practice to do syntax check before hand
 `ansible-playbook --syntax-check playbook.yml`\
